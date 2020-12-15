@@ -224,9 +224,10 @@
                             </div>
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
                                 <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="text-muted"></h5>
+                                    <div class="card-body" id="display_panel">
+                                        <!-- <h5 class="text-muted"></h5> -->
                                         <div id="plot_div" style="width:auto;;height:400px;"></div>
+                                        <!-- <div id="plot_div2" style="width:auto;;height:400px;"></div> -->
                                     </div>
                                     <div id="sparkline-revenue"></div>
                                 </div>
@@ -265,7 +266,7 @@
     <script src="static/echarts.min.js"></script>
     <script type="text/javascript">
         // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('plot_div'));
+        
 
         $(function() {
             $(".nav li").click(function() {
@@ -278,8 +279,11 @@
         function get_json(exp_name){
             $(this).children('a').addClass("active");
             $(this).siblings('li').children('a').removeClass("active")
+
             $.get('/get_json', {name: exp_name}).done(function (data) {
                 $('#hyper_param').empty();
+                $('#display_panel').empty();
+
                 var json = $.parseJSON(data);
                 var s = '<tr><td>' + 'date' + '</td><td>' + json['date'] + '</td></tr>';
                 $('#hyper_param').append(s);
@@ -298,7 +302,15 @@
 
         }
         function plot(title, data){   
+            
+            
             console.log('plot')  
+
+            // 像display_panel 添加一个画图示例，为了追踪多个画图
+            var s = '<div id="' + title + '" style="width:auto; height:400px;"></div>';
+            $('#display_panel').append(s);
+
+            var myChart = echarts.init(document.getElementById(title));
             // 指定图表的配置项和数据
             var option = {
                     tooltip: { //跟随鼠标显示数值
