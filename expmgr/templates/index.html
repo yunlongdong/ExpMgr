@@ -307,10 +307,13 @@
             console.log('plot')  
 
             // 像display_panel 添加一个画图示例，为了追踪多个画图
-            var s = '<div id="' + title + '" style="width:auto; height:400px;"></div>';
+            var s = '<div id="' + title + '" style="width:auto; height:300px;"></div>';
             $('#display_panel').append(s);
 
+            // 添加图表自适应resize https://www.cnblogs.com/goloving/p/9008165.html
             var myChart = echarts.init(document.getElementById(title));
+            window.addEventListener("resize", () => { myChart.resize();});
+
             // 指定图表的配置项和数据
             var option = {
                     tooltip: { //跟随鼠标显示数值
