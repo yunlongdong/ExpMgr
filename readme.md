@@ -1,6 +1,6 @@
 ### ExpMgr 超轻量级实验管理平台
 
-主要用来管理实验中参数对比，曲线对比。采用Bootstrap+JQuery+Flask做为技术路线（Old School）。该管理平台实现非常轻量级，功能也相对较少，正在逐步完善。
+主要用来管理实验中参数对比，曲线对比。采用Bootstrap+JQuery+Flask+EChart.js做为技术路线（Old School）。该管理平台实现非常轻量级，功能也相对较少，正在逐步完善。
 
 ### 用法
 
@@ -30,4 +30,4 @@ m.save()
 
 然后打开浏览器，浏览localhost:5000 就可以看到管理平台:
 
-![demo](C:\Users\dyl\Desktop\ExpMgr\release_v1\static\demo.png)
+![demo](https://github.com/yunlongdong/ExpMgr/blob/main/expmgr/static/demo.png)
