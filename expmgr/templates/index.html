@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+ 
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="static/vendor/bootstrap/css/bootstrap.min.css">
+    <link href="static/vendor/fonts/circular-std/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/libs/css/style.css">
+    <link rel="stylesheet" href="static/vendor/fonts/fontawesome/css/fontawesome-all.css">
+    <link rel="stylesheet" href="static/vendor/fonts/material-design-iconic-font/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="static/vendor/fonts/flag-icon-css/flag-icon.min.css">
+    <title>ExpMgr实验管理平台</title>
+</head>
+
+<body>
+    <!-- ============================================================== -->
+    <!-- main wrapper -->
+    <!-- ============================================================== -->
+    <div class="dashboard-main-wrapper">
+        <!-- ============================================================== -->
+        <!-- navbar -->
+        <!-- ============================================================== -->
+        <div class="dashboard-header">
+            <nav class="navbar navbar-expand-lg bg-white fixed-top">
+                <a class="navbar-brand" href="#">ExpMgr 实验管理平台</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto navbar-right-top">
+                        <!-- <li class="nav-item">
+                            <div id="custom-search" class="top-search-bar">
+                                <input class="form-control" type="text" placeholder="Search..">
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown notification">
+                            <a class="nav-link nav-icons" href="#" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-fw fa-bell"></i> <span class="indicator"></span></a>
+                            <ul class="dropdown-menu dropdown-menu-right notification-dropdown">
+                                <li>
+                                    <div class="notification-title"> Notification</div>
+                                    <div class="notification-list">
+                                        <div class="list-group">
+                                            <a href="#" class="list-group-item list-group-item-action active">
+                                                <div class="notification-info">
+                                                    <div class="notification-list-user-img"><img src="static/images/avatar-2.jpg" alt="" class="user-avatar-md rounded-circle"></div>
+                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">Jeremy Rakestraw</span>accepted your invitation to join the team.
+                                                        <div class="notification-date">2 min ago</div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="list-group-item list-group-item-action">
+                                                <div class="notification-info">
+                                                    <div class="notification-list-user-img"><img src="static/images/avatar-3.jpg" alt="" class="user-avatar-md rounded-circle"></div>
+                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">John Abraham </span>is now following you
+                                                        <div class="notification-date">2 days ago</div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="list-group-item list-group-item-action">
+                                                <div class="notification-info">
+                                                    <div class="notification-list-user-img"><img src="static/images/avatar-4.jpg" alt="" class="user-avatar-md rounded-circle"></div>
+                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">Monaan Pechi</span> is watching your main repository
+                                                        <div class="notification-date">2 min ago</div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="list-group-item list-group-item-action">
+                                                <div class="notification-info">
+                                                    <div class="notification-list-user-img"><img src="static/images/avatar-5.jpg" alt="" class="user-avatar-md rounded-circle"></div>
+                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">Jessica Caruso</span>accepted your invitation to join the team.
+                                                        <div class="notification-date">2 min ago</div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list-footer"> <a href="#">View all notifications</a></div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown connection">
+                            <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="fas fa-fw fa-th"></i> </a>
+                            <ul class="dropdown-menu dropdown-menu-right connection-dropdown">
+                                <li class="connection-list">
+                                    <div class="row">
+                                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
+                                            <a href="#" class="connection-item"><img src="static/images/github.png" alt="" > <span>Github</span></a>
+                                        </div>
+                                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
+                                            <a href="#" class="connection-item"><img src="static/images/dribbble.png" alt="" > <span>Dribbble</span></a>
+                                        </div>
+                                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
+                                            <a href="#" class="connection-item"><img src="static/images/dropbox.png" alt="" > <span>Dropbox</span></a>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
+                                            <a href="#" class="connection-item"><img src="static/images/bitbucket.png" alt=""> <span>Bitbucket</span></a>
+                                        </div>
+                                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
+                                            <a href="#" class="connection-item"><img src="static/images/mail_chimp.png" alt="" ><span>Mail chimp</span></a>
+                                        </div>
+                                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
+                                            <a href="#" class="connection-item"><img src="static/images/slack.png" alt="" > <span>Slack</span></a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="conntection-footer"><a href="#">More</a></div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown nav-user">
+                            <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="static/images/avatar-1.jpg" alt="" class="user-avatar-md rounded-circle"></a>
+                            <div class="dropdown-menu dropdown-menu-right nav-user-dropdown" aria-labelledby="navbarDropdownMenuLink2">
+                                <div class="nav-user-info">
+                                    <h5 class="mb-0 text-white nav-user-name">John Abraham </h5>
+                                    <span class="status"></span><span class="ml-2">Available</span>
+                                </div>
+                                <a class="dropdown-item" href="#"><i class="fas fa-user mr-2"></i>Account</a>
+                                <a class="dropdown-item" href="#"><i class="fas fa-cog mr-2"></i>Setting</a>
+                                <a class="dropdown-item" href="#"><i class="fas fa-power-off mr-2"></i>Logout</a>
+                            </div>
+                        </li> -->
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!-- ============================================================== -->
+        <!-- end navbar -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- left sidebar -->
+        <!-- ============================================================== -->
+        <div class="nav-left-sidebar sidebar-dark">
+            <div class="menu-list">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <a class="d-xl-none d-lg-none" href="#">实验列表</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav flex-column">
+                            <li class="nav-divider">
+                                超轻量级实验管理平台
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="fa fa-fw fa-user"></i>实验列表<span class="badge badge-success">6</span></a>
+                                <div id="submenu-1" class="collapse submenu active" style="">
+                                    <ul class="nav flex-column">
+                                        {% for exp in exp_list %}
+                                        <li class="nav-item active">
+                                            <a class="nav-link">{{ exp }}</a>
+                                        </li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- ============================================================== -->
+        <!-- end left sidebar -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- wrapper  -->
+        <!-- ============================================================== -->
+        <div class="dashboard-wrapper">
+            <div class="dashboard-ecommerce">
+                <div class="container-fluid dashboard-content ">
+                    <!-- ============================================================== -->
+                    <!-- pageheader  -->
+                    <!-- ============================================================== -->
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <div class="page-header">
+                                <h2 class="pageheader-title">Talk is cheap, show me the code.</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ============================================================== -->
+                    <!-- end pageheader  -->
+                    <!-- ============================================================== -->
+                    <div class="ecommerce-widget">
+
+                        <div class="row">
+                            <div class="col-xl-3 col-lg-12 col-md-6 col-sm-12 col-12">
+                                <!-- ============================================================== -->
+                                <!-- top perfomimg  -->
+                                <!-- ============================================================== -->
+                                <div class="card">
+                                    <h5 class="card-header">超参数配置</h5>
+                                    <div class="card-body p-0">
+                                        <div class="table-responsive">
+                                            <table class="table no-wrap p-table">
+                                                <thead class="bg-light">
+                                                    <tr class="border-0">
+                                                        <th class="border-0">名称</th>
+                                                        <th class="border-0">值</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id='hyper_param'>
+                                                    <!-- <tr>
+                                                        <td>Campaign#1</td>
+                                                        <td>98,789 </td>
+                                                    </tr> -->
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- ============================================================== -->
+                                <!-- end top perfomimg  -->
+                                <!-- ============================================================== -->
+
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="text-muted"></h5>
+                                        <div id="plot_div" style="width:auto;;height:400px;"></div>
+                                    </div>
+                                    <div id="sparkline-revenue"></div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <!-- ============================================================== -->
+            <!-- footer -->
+            <!-- ============================================================== -->
+            
+            <!-- ============================================================== -->
+            <!-- end footer -->
+            <!-- ============================================================== -->
+        </div>
+        <!-- ============================================================== -->
+        <!-- end wrapper  -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- end main wrapper  -->
+    <!-- ============================================================== -->
+    <!-- Optional JavaScript -->
+    <!-- jquery 3.3.1 -->
+    <script src="static/vendor/jquery/jquery-3.3.1.min.js"></script>
+    <!-- bootstap bundle js -->
+    <script src="static/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+    <!-- slimscroll js -->
+    <script src="static/vendor/slimscroll/jquery.slimscroll.js"></script>
+    <!-- main js -->
+    <script src="static/libs/js/main-js.js"></script>
+   
+    <script src="static/echarts.min.js"></script>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('plot_div'));
+
+        $(function() {
+            $(".nav li").click(function() {
+                $(this).children('a').addClass("active");
+                $(this).siblings('li').children('a').removeClass("active");
+                get_json($(this).children('a').text())            
+            })
+        })
+
+        function get_json(exp_name){
+            $(this).children('a').addClass("active");
+            $(this).siblings('li').children('a').removeClass("active")
+            $.get('/get_json', {name: exp_name}).done(function (data) {
+                $('#hyper_param').empty();
+                var json = $.parseJSON(data);
+                var s = '<tr><td>' + 'date' + '</td><td>' + json['date'] + '</td></tr>';
+                $('#hyper_param').append(s);
+                delete json['dates']
+                for(var key in json){
+                    if(!key.startsWith('log')){
+                        var s = '<tr><td>' + key + '</td><td>' + json[key] + '</td></tr>';
+                        $('#hyper_param').append(s);
+                    }
+                    else{
+                        plot(key, json[key])
+                    }
+                            
+                }
+            });
+
+        }
+        function plot(title, data){   
+            console.log('plot')  
+            // 指定图表的配置项和数据
+            var option = {
+                    tooltip: { //跟随鼠标显示数值
+                        trigger: 'axis'
+                    },
+                    title: {
+                        text: title
+                    },
+                    animation: false,
+                    xAxis: {
+                        type: 'value',
+                    },
+                    yAxis: {
+                        type: 'value'
+                    },
+                    series: [{
+                        data: eval(data),
+                        type: 'line',
+                        symbol: 'circle'//折线点类型
+                    }]
+                };
+            // 使用刚指定的配置项和数据显示图表。
+            myChart.setOption(option);
+        }
+    </script>    
+</body>
+ 
+</html>
