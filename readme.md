@@ -30,4 +30,4 @@ m.save()
 
 然后打开浏览器，浏览localhost:5000 就可以看到管理平台:
 
-![demo](C:\Users\dyl\Desktop\ExpMgr\release_v1\static\demo.png)
+![demo](https://github.com/yunlongdong/ExpMgr/blob/main/expmgr/static/demo.png)
