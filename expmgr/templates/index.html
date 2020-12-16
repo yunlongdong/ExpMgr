@@ -150,11 +150,11 @@
                                 超轻量级实验管理平台
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="fa fa-fw fa-user"></i>实验列表<span class="badge badge-success">6</span></a>
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="fa fa-fw fa-chart-area"></i>实验列表<span class="badge badge-success">6</span></a>
                                 <div id="submenu-1" class="collapse submenu active" style="">
                                     <ul class="nav flex-column">
                                         {% for exp in exp_list %}
-                                        <li class="nav-item active">
+                                        <li class="nav-item">
                                             <a class="nav-link">{{ exp }}</a>
                                         </li>
                                         {% endfor %}
@@ -197,7 +197,10 @@
                                 <!-- top perfomimg  -->
                                 <!-- ============================================================== -->
                                 <div class="card">
-                                    <h5 class="card-header">超参数配置</h5>
+                                    <h3 class="card-header">超参数配置
+                                        <a class="btn btn-outline-light float-right" id="download"><i class="fa fa-fw fa-download"></i></a>
+                                    </h3>
+                                    
                                     <div class="card-body p-0">
                                         <div class="table-responsive">
                                             <table class="table no-wrap p-table">
@@ -206,6 +209,7 @@
                                                         <th class="border-0">名称</th>
                                                         <th class="border-0">值</th>
                                                     </tr>
+                                                    
                                                 </thead>
                                                 <tbody id='hyper_param'>
                                                     <!-- <tr>
@@ -265,14 +269,19 @@
    
     <script src="static/echarts.min.js"></script>
     <script type="text/javascript">
-        // 基于准备好的dom，初始化echarts实例
-        
+        var current_exp_name = '';
 
+      
+        // 点击左侧实验
         $(function() {
             $(".nav li").click(function() {
+
                 $(this).children('a').addClass("active");
                 $(this).siblings('li').children('a').removeClass("active");
-                get_json($(this).children('a').text())            
+                current_exp_name = $(this).children('a').text();
+                get_json($(this).children('a').text());  
+                
+                $('#download').attr('href', 'download?name='+current_exp_name);
             })
         })
 
@@ -287,7 +296,7 @@
                 var json = $.parseJSON(data);
                 var s = '<tr><td>' + 'date' + '</td><td>' + json['date'] + '</td></tr>';
                 $('#hyper_param').append(s);
-                delete json['dates']
+                delete json['date']
                 for(var key in json){
                     if(!key.startsWith('log')){
                         var s = '<tr><td>' + key + '</td><td>' + json[key] + '</td></tr>';

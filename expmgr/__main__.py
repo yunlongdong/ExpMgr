@@ -1,5 +1,5 @@
 from flask import Flask
-from flask import render_template
+from flask import render_template, send_file
 from flask import url_for, request
 import numpy as np
 import json
@@ -19,6 +19,7 @@ dir_name = os.path.join(args.logdir, results_dir)
 
 def search_exp():
     exp_list = glob.glob(os.path.join(dir_name, '*.json'))   
+    exp_list = sorted(exp_list)
     exp_list_basename = [os.path.basename(exp) for exp in exp_list[::-1]]
     return exp_list_basename
     
@@ -50,6 +51,12 @@ def main_page():
 def get_json():
     name = request.args.get("name")
     return json.dumps(load_json(name))
+
+@app.route('/download', methods=["GET"])
+def download():
+    name = request.args.get("name")
+    return send_file(os.path.join(os.path.abspath(dir_name), name), as_attachment=True)
+    
     
 if __name__ == "__main__":
     app.run(port=args.port, debug=False, threaded=True)
