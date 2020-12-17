@@ -6,10 +6,11 @@ from copy import copy
 from .constants import results_dir
 
 class Monitor:
-    def __init__(self):
+    def __init__(self, name_info=''):
         self.timestamp = str(int(round(time.time() * 1000)))
         self.date = time.strftime("%Y-%m-%d %H_%M")
         self.json = {}
+        self.name_info = name_info
         self.results_dir = results_dir
         if not os.path.exists(self.results_dir):
             os.mkdir(self.results_dir)
@@ -32,7 +33,7 @@ class Monitor:
             self.json[name] = []
 
     def save(self):
-        fn = self.results_dir + '/' +self.timestamp + '.json'
+        fn = self.results_dir + '/' +self.timestamp + self.name_info + '.json'
    
         with open(fn, 'w') as fp:
             json.dump(self.json, fp)
