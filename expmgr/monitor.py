@@ -33,7 +33,7 @@ class Monitor:
             self.json[name] = []
 
     def save(self):
-        fn = self.results_dir + '/' +self.timestamp + self.name_info + '.json'
+        fn = self.results_dir + '/' +self.timestamp + str(self.name_info) + '.json'
    
         with open(fn, 'w') as fp:
             json.dump(self.json, fp)
