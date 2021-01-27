@@ -18,7 +18,7 @@ args = {
 m.load_args(args)
 for i in range(10):
     # 监控第i步，loss的值
-	m.track(i, i+2, 'loss')
+    m.track(i, i+2, 'loss')
     
 # 结果会自动保存在改文件同级别文件夹下
 m.save()
